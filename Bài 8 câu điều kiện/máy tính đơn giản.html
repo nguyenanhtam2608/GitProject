@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maytinhdongian</title>
+</head>
+<body>
+<form name="calculator">
+    <h1> Calculator </h1>
+    <h2 id="display"></h2>
+
+    <input type="text" id="thanhbantinh"><br>
+    <br>
+    <table border="1px" cellpadding="15px" cellspacing="15px">
+        <tr>
+
+            <td onclick="so9(9)"> 9</td>
+            <td onclick="so9(8)"> 8</td>
+            <td onclick="so9(7)"> 7</td>
+
+        </tr>
+        <tr>
+
+            <td onclick="so9(6)"> 6</td>
+            <td onclick="so9(5)"> 5</td>
+            <td onclick="so9(4)"> 4</td>
+        </tr>
+        <tr>
+
+            <td onclick="so9(3)"> 3</td>
+            <td onclick="so9(2)"> 2</td>
+            <td onclick="so9(1)"> 1</td>
+
+        </tr>
+        <tr>
+
+            <td onclick="so9(0)"> 0</td>
+            <td onclick="so9('.')"> .</td>
+            <td onclick="so9(=)"> =</td>
+
+        </tr>
+        <tr>
+
+            <td onclick="so9(+)"> +</td>
+            <td onclick="so9('-')"> -</td>
+            <td onclick="so9('*')"> *</td>
+            <td onclick="so9('/')"> /</td>
+
+
+        </tr>
+    </table>
+    <p> Result : <span id="ket"></span></p>
+</form>
+</body>
+<script>
+    let number = '';
+    function so9(pheptinh) {
+if (pheptinh === '='){
+    document.getElementById('display').innerText=eval(number)
+}
+    }
+</script>
+</html>

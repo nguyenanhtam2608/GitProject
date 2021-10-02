@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập số dòng"));
+    let col = parseInt(prompt("Nhập số cột"));
+    let arr2d = new Array(row);
+    let max
+    let min
+    for (row = 0; row < arr2d.length; row++) {
+        arr2d[row] = new Array(col);
+        for (col = 0; col < arr2d.length; col++) {
+            arr2d[row][col] = parseInt(prompt("Nhập số lượng [" + row + "][" + col + "]"))
+            max = arr2d[0][0];
+            if (arr2d[row][col] > max) {
+                max = arr2d[row][col];
+            }
+            min = arr2d[0][0]
+            if (arr2d[row][col] < min) {
+                min = arr2d[row][col]
+            }
+        }
+    }
+
+    document.write("Max là: " + max)
+    document.write("<br>")
+    document.write("Min là: " + min)
+
+
+</script>
+</body>
+</html>

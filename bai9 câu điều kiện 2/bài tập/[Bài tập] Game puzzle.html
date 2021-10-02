@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="black.jpg" onclick="image(1)" id="image1" width="100px" height="400px">
+<img src="red.jpg" onclick="image(2)" id="image2" width="100px" height="400px">
+<img src="tải%20xuống.jpg" onclick="image(3)" id="image3" width="100px" height="400px">
+<script>
+    function image(number) {
+        let img1 = document.getElementById('image1').getAttribute('src');
+        let img2 = document.getElementById('image2').getAttribute('src');
+        let img3 = document.getElementById('image3').getAttribute('src');
+        switch (number) {
+            case 1: {
+                if (img1 === "black.jpg") {
+                    document.getElementById('image1').src = "red.jpg"
+                } else if (img1 === "red.jpg") {
+                    document.getElementById("image1").src = "tải%20xuống.jpg"
+                } else {
+                    document.getElementById('image1').src = "black.jpg"
+                }    break;
+            }
+
+            case 2: {
+                if (img2 === "red.jpg") {
+                    document.getElementById('image2').src = "black.jpg"
+                } else if (img2 === "black.jpg") {
+                    document.getElementById('image2').src = "tải%20xuống.jpg"
+                } else {
+                    document.getElementById('image2').src = 'red.jpg'
+                }  break;
+            }
+
+            case 3: {
+                if (img3 === "tải%20xuống.jpg") {
+                    document.getElementById('image3').src = "black.jpg"
+                } else if (img3 === "red.jpg") {
+                    document.getElementById('image3').src = "tải%20xuống.jpg"
+                } else {
+                    document.getElementById('image3').src = "red.jpg"
+                }
+            break;
+            }
+
+
+        }if(document.getElementById('image1').getAttribute('src') === "black.jpg"
+            && document.getElementById('image2').getAttribute('src') === "black.jpg"
+            && document.getElementById('image3').getAttribute('src') === "black.jpg") {
+            alert("Bạn đã chọn đúng (-_-) ")
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        // Hàm khởi tạo các object , sẽ được gọi thông qua từ khóa new
+        constructor(radius) {
+            this.radius = radius;
+
+        }
+
+        //Getter - lấy thông tin của thuộc tính
+          getRadius() {
+            return this.radius
+        }
+
+        getArea() {
+            return Math.PI * radius * radius;
+        }
+
+    }
+
+    let circle = new Circle(2)
+    let radius = circle.getRadius();
+    let area = circle.getArea();
+    document.write(radius + area)
+    document.write("<br>")
+    let circle1 = new Circle(6);
+    let radius1 = circle1.getRadius()
+    let area1 = circle1.getArea();
+    document.write(radius1 + area1)
+</script>
+</body>
+</html>

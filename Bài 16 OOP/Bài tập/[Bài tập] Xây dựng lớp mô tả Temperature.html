@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            if (doC <= -273) {
+                this.doC = -273
+            } else {
+                this.doC = doC
+            }
+        }
+
+        getdoC() {
+            return this.doC
+        }
+
+        getdoF() {
+            return this.doC * 9 / 5 + 32
+        }
+
+        getdoK() {
+            return this.doC + 273.15
+        }
+    }
+
+    let nhietdo = new Temperature(-350)
+    let doC = nhietdo.getdoC();
+    let doF = nhietdo.getdoF();
+    let doK = nhietdo.getdoK();
+    document.write("Đổi từ độ C sang độ F là : " + doF);
+    document.write("<br>")
+    document.write("Đổi từ độ C sang độ K là : " + doK);
+</script>
+</body>
+</html>

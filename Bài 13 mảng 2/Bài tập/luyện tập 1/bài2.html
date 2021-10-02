@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài2</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    for (i = 0; i < 4; i++) {
+        mang[i] = parseInt(prompt("nhập giá trị  : "));
+        var max = Math.max.apply(Math, mang);
+        var index = mang.indexOf(Math.max.apply(Math, mang))
+    }
+    document.write("Các Phần tử bạn vừa nhập : " + mang + "<br>");
+    document.write("Số lớn nhất trong mảng : " + max + "<br>" + " Tại vị trí : " + index + " <br>")
+
+</script>
+</body>
+</html>

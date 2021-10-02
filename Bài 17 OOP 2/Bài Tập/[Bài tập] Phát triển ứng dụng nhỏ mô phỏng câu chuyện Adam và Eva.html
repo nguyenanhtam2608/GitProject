@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, weight) {
+            this.name = name;
+            this.weight = weight
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        speak() {
+            document.write(this.name + " Nói chuyện : " + "Hello people" + "<br>")
+            document.write("Sau đây mình sẽ ăn Apple nè: " + "<br>")
+        }
+
+        eat(apple) {
+            for (let i = 0; i <= 10; i++) {
+                if (apple.weight > 0) {
+                    apple.weight--;
+                    human.weight++;
+                    document.write("Adam eat apple : Weight apple sẽ còn :" + apple.getWeight() + " Weight Adam : " + human.getWeight());
+                    document.write("<br>")
+                } else {
+                    document.write("Hết táo rồi nhá ")
+                }
+            }
+        }
+    }
+
+    let apple = new Apple(10);
+    let human = new Human('Adam', 50)
+
+    human.speak();
+    human.getName();
+    document.write("<br>")
+
+    human.eat(apple);
+
+</script>
+</body>
+</html>

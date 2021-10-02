@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+
+    for (i = 0; i < 10; i++) {
+        mang[i] = parseInt(prompt("nhập mảng số nguyên "));
+    }
+    let num = parseInt(prompt("Nhập số cần kiểm tra"))
+    if (mang.indexOf(num) === -1) {
+        document.write("V is not in the array" + "<br>")
+
+    } else {
+        document.write("V is  in the array" + "<br>")
+
+    }
+
+
+</script>
+</body>
+</html>

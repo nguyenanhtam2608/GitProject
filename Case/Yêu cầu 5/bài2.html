@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập số dòng"))
+    let col = parseInt(prompt("Nhập số cột"))
+
+    let dem = 0
+    let arr2d = new Array(row)
+    for (row = 0; row < arr2d.length; row++) {
+        arr2d[row] = new Array(col);
+        for (col = 0; col < arr2d[row].length; col++) {
+            let check = true;
+
+            arr2d[row][col] = parseInt(prompt("Nhập số lượng[ " + row + "][" + col + "] "));
+            if (arr2d[row][col] < 2) {
+                check = false;
+            } else {
+                for (let k = 2; k < arr2d[row][col]; k++) {
+                    if (arr2d[row][col] % k === 0) {
+                        check = false;
+                    } else {
+                        check = true;
+                        dem += 1
+                    }
+                }
+            }
+        }
+    }
+    document.write(dem)
+    //Em chưa làm xong ạ
+
+</script>
+</body>
+</html>

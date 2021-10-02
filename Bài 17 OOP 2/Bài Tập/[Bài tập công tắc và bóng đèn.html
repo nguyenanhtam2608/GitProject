@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Congtac {
+        constructor(status) {
+            this.stastus = status
+        }
+
+        getStatus() {
+            return this.stastus;
+        }
+
+        congtacbat() {
+            if (this.stastus) {
+                document.write("Công tắc đã bật ")
+                Bongden.status = true
+            } else {
+                document.write("Công tắc chưa bật ")
+                Bongden.status = false
+            }
+        }
+    }
+    class Bongden {
+        constructor(status) {
+            this.status = status
+        }
+
+        getStatus() {
+            return this.status
+        }
+        batden() {
+            if (Bongden.status) {
+                document.write("Đèn đã được bật")
+            } else {
+                document.write("Đèn chưa được bật")
+            }
+        }
+    }
+    let congtac = new Congtac(true)
+    let bongden = new Bongden()
+    congtac.congtacbat();
+    document.write("<br>")
+    bongden.batden()
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile1 {
+        constructor() {
+            this.pin = 100;
+            this.status = true;
+            this.sentMees = [];
+            this.receive1 = []
+        }
+
+        getPin() {
+            return this.pin
+        }
+
+        getStatus() {
+            return this.status
+        }
+
+        getTestonof() {
+            let check = confirm("Bạn có muốn tắt điện thoại không!")
+            if (check) {
+                alert("Điện thoại của bạn đang tắt")
+                this.status = false
+            } else {
+                alert("Điện thoại của bạn đang bật")
+                this.status = true
+            }
+        }
+
+        getTest() {
+            if (this.status) {
+                document.write("Điện thoại của bạn đã bật")
+            } else {
+                document.write("Điện thoại của bạn đã tắt")
+            }
+        }
+
+        getSacpin() {
+            if (this.pin <= 20) {
+                alert("Hãy sạc pin ^^ ")
+            }
+        }
+
+        sendMees(sendMees, mobile1) {
+            this.sentMees.push(sendMees);
+            mobile1.receive(sendMees)
+            this.pin--
+        }
+
+        receive(receiveMess) {
+            this.receive1.push(receiveMess)
+            this.pin--
+        }
+
+    }
+
+    let mobile1 = new Mobile1();
+    let mobile2 = new Mobile1();
+
+    mobile2.sendMees("xinchao", mobile1);
+    document.write("tin đã gửi : " + mobile2.sentMees + "<br>")
+    document.write("tin đã nhận : " + mobile1.receive1 + '<br>')
+
+    let pin = mobile1.getPin();
+    mobile1.getTestonof()
+    mobile1.getTest();
+    document.write("<br>");
+    document.write("Số pin của Điện thoại là : " + pin + "%" + "<br>")
+    mobile1.getSacpin();
+
+
+</script>
+</body>
+</html>

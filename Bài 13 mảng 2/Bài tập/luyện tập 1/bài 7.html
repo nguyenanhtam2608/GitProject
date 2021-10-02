@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    for (i = 0; i < 3; i++) {
+        mang[i] = parseInt(prompt("nhập mảng số nguyên "));
+    }
+    let num = parseInt(prompt("Nhập số cần kiểm tra"))
+   if(mang.indexOf(num)=== -1){
+       document.write("Không có trong mảng ")
+   }else{
+       document.write("Có trong mảng ")
+       mang.splice(mang.indexOf(num),1)
+       mang.push(0)
+       document.write(mang)
+   }
+
+</script>
+</body>
+</html>

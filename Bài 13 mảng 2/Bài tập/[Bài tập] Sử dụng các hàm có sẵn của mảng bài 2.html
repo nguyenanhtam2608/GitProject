@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1233</title>
+</head>
+<body>
+<script>
+      let nhap =prompt("nhập dãy số ")
+    const chuoi =nhap.toString()
+      let ketqua = [chuoi[0]];
+     for (let x=1;x<chuoi.length;x++){
+         if ((chuoi[x-1]%2===0)&&(chuoi[x]%2===0)){
+             ketqua.push('-', chuoi[x])
+         }else {
+             ketqua.push(chuoi[x])
+         }
+     }document.write(ketqua.join(''))
+</script>
+</body>
+</html>

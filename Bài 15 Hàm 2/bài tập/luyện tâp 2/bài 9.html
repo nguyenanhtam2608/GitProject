@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>`
+<script>
+    let mang = ['a','b','c','d','e'];
+     let check =false;
+     let a = 0;
+    function duyetarray() {
+        let nhap = prompt("Nhập kí tự cần kiểm tra : ");
+        for (let i = 0; i < mang.length; i++) {
+            if (nhap === mang[i]){
+                check = true;
+                   a+=1
+            }
+        }
+        if(check ===true ){
+            document.write(nhap +" Xuất hiện lần thứ : "+ a)
+        }else
+document.write(-1)
+    }
+    duyetarray()
+</script>
+</body>
+</html>

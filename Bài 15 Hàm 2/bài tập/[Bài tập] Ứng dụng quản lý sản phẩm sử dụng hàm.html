@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add new Product</h2>
+<input type="text" placeholder="New Product" id="product">
+<button onclick="addProduct()">Add</button>
+<div id="table"></div>
+<script>
+    let listProduct = ["Sony Speria", "Samsum Glaxy", "nokia 6", "Xiaomi Redmi Note 4", "Apple iphone 6", "Xiaimi Mi5 plus", "Apple iphone 8 Plus"];
+
+    function addProduct() {
+        let product = document.getElementById("product").value;
+        if (product !== "") {
+            listProduct.push(product);
+            document.getElementById("product").value = "";
+            displayProduct()
+        }
+    }
+
+    function editProduct(index) {
+        listProduct[index] = prompt("Nhập tên sản phẩm muốn sửa : ")
+        displayProduct()
+    }
+
+    function deleteProduct(index) {
+        let check = confirm("Bạn muốn xóa sản phẩm : " + listProduct[index] + "Không ?");
+        if (check) {
+            listProduct.splice(index, 1);
+            displayProduct()
+        }
+    }
+
+    function displayProduct() {
+        let table = "<table>" +
+            "<tr><th>Product Name</th></tr>";
+        for (let i = 0; i < listProduct.length; i++) {
+            table += "<tr>" +
+                "<td>" + listProduct[i] + "</td>" +
+                "<td><button onclick='editProduct(" + i + ")'>Edit</button>" + "</td>" +
+                "<td><button onclick='deleteProduct(" + i + ")'>Delete</button>" + "</td>" +
+                "</tr>"
+        }
+        table += "</table>";
+        document.getElementById("table").innerHTML = table
+    }
+
+    displayProduct()
+
+
+</script>
+</body>
+</html>

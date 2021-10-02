@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>123</title>
+</head>
+<body>
+<p id= "nhap"</p>
+<script>
+
+   var nhap = parseInt(prompt("Nhập số lượng số nguyên tố của bạn"));
+   let count = 0;
+   for (let n = 2; count < nhap; n++) {
+        let check = true;
+       for (let i = 2; i < n; i++) {
+           if (n % i === 0) {
+               check = false;
+               break;
+           }
+       }
+
+       if (check === true) {
+           count += 1
+           document.getElementById("nhap").innerHTML += n+ "<br> ";
+       }
+   }
+
+</script>
+</body>
+</html>

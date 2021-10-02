@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="random()">Play</button>
+<script>
+    function random() {
+        let min = parseInt(prompt("Bạn muốn đoán số từ : "));
+        let max = parseInt(prompt("Đến: "));
+        let num = Math.round(Math.random() * (max - min) + min);
+        let choose = parseInt(prompt("Bạn đoán số nào: "));
+
+        for (let i = 0; i < 3; i++) {
+            if (choose === num) {
+                alert("CHức mừng bạn đã đoán đúng");
+                break;
+            } else if (choose > num) {
+                choose = parseInt(prompt("SỐ của bạn chọn đang lớn hơn, nhập lại"));
+            } else {
+                choose = parseInt(prompt("SỐ của bạn chọn đang bé hơn, nhập lại"));
+            }
+        }
+    }
+</script>
+</body>
+</html>

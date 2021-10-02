@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse</title>
+</head>
+<body>
+<form>
+    <img src="https://thuviendohoa.vn/upload/images/items/hinh-anh-qua-bong-vang-png-454.webp" id="bong">
+    <p>Click button below to move the image to right</p>
+    <button type="button" onclick="moveRight();"  value="Click Me"> Click me</button>
+</form>
+    <script>
+        let img =null;
+        img =document.getElementById('bong');
+        function init() {
+            img=document.getElementById('bong');
+            img.style.position ='relative';
+            img.style.left='0px';
+        }
+        function moveRight() {
+            img.style.left = parseInt(img.style.left) + 10 + 'px';
+        }
+        window.onload=init;
+
+    </script>
+
+
+
+
+
+</body>
+</html>

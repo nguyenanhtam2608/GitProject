@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" id="nhap" placeholder=" Bạn hãy gọi món  "/>
+<button onclick="displaygia()"> Hiển thị</button>
+<br> <br>
+<div id="display"></div>
+<div id="giasp"> Giá của sản phẩm</div>
+<script>
+    let mang = ["cafe ", "cam vắt ", "Nước ép cà rốt ", "Nước ép cà chua", "Nước lọc", "Nước dừa ", "AFK món "];
+
+    function listmon() {
+        count = 0;
+        for (let a = 0; a < mang.length; a++) {
+            count += 1;
+            document.getElementById("display").innerHTML += count + " - " + mang[a] + "<br>"
+        }
+    }
+
+    listmon()
+
+    function displaygia() {
+        let nhap = parseInt(document.getElementById("nhap").value);
+        switch (nhap) {
+            case 1 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 10
+                document.getElementById("giasp").innerHTML = "Cà phê " + " có giá là : " + "10k" + " X  " + soluong + "<br>" + "Tổng tiền : " + sum + "K";
+                break;
+            }
+            case 2 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 20
+                document.getElementById("giasp").innerHTML = "Cam Vắt" + " có giá là : " + "20k" + " X " + soluong + "<br>" + "Tổng tiền : " + sum + "K"
+                break;
+            }
+            case 3 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 20
+                document.getElementById("giasp").innerHTML = "Nước ép cà rốt " + " có giá là : " + "20k" + " X " + soluong + "<br>" + "Tổng tiền : " + sum + "K"
+                break;
+            }
+            case 4 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 20
+                document.getElementById("giasp").innerHTML = "Nước ép cà chua " + " có giá là : " + "20k" + " X " + soluong + "<br>" + "Tổng tiền : " + sum + "K"
+                break;
+            }
+            case 5 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 5
+                document.getElementById("giasp").innerHTML = "Nước lọc " + " có giá là : " + "5k" + " X " + soluong + "<br>" + "Tổng tiền : " + sum + "K"
+                break;
+            }
+            case 6 : {
+                let a = parseInt(prompt("Bạn hãy nhập số lượng : "))
+                let soluong = a;
+                let sum = a * 15
+                document.getElementById("giasp").innerHTML = "Nước dừa  " + " có giá là : " + "15k" + " X " + soluong + "<br>" + "Tổng tiền : " + sum + "K"
+                break;
+            }
+            case 7 : {
+                confirm("Nhấn Ok để  thoát khỏi chương trình ")
+                break;
+            }
+            default : {
+                alert("Bạn hãy nhập đúng ")
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

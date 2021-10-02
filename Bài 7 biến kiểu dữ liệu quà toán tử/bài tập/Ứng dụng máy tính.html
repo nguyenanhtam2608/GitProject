@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ungdung</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="text" id="truoc">
+<input type="text" id="sau"><br><br>
+<button onclick="addition()" >Addition(+) </button>
+<button onclick="subtrac()" >Subtraction(-) </button>
+<button onclick="mul()" >Multiplocation(X) </button>
+<button onclick="div()">Division(/) </button>
+<p> Result : <span id="ket"> </span></p>
+</body>
+<script>
+function addition() {
+    var a = document.getElementById('truoc').value;
+    var b = document.getElementById('sau').value;
+    var a = parseFloat(a);
+    var b = parseFloat(b)
+    let ketqua = a + b;
+    document.getElementById('ket').innerText = ketqua;
+}
+
+   function  subtrac() {
+        var a = document.getElementById('truoc').value;
+        var b = document.getElementById('sau').value;
+        var a = parseFloat(a);
+        var b = parseFloat(b)
+        let ketqua = a - b;
+        document.getElementById('ket').innerText = ketqua;
+}
+function mul() {
+    var a= document.getElementById('truoc').value;
+    var b= document.getElementById('sau').value;
+    var a=parseFloat(a);
+    var b=parseFloat(b);
+var ketqua = a*b;
+document.getElementById('ket').innerText=ketqua;
+}
+function div() {
+    var a = document.getElementById('truoc').value;
+    var b=document.getElementById('sau').value;
+    var a=parseFloat(a);
+    var b=parseFloat(b);
+    var ketqua =a/b;
+    document.getElementById('ket').innerText=ketqua;
+
+}
+</script>
+</html>

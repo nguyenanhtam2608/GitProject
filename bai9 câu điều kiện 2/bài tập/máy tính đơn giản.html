@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maytinhdongian</title>
+    <style>
+        table {
+            text-align: center;
+            height: 300px;
+            width: 300px;
+            border: solid #000000;
+        }
+
+        input {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<form name="calculator">
+    <h1> Calculator </h1>
+    <br>
+    <table border="8px" cellpadding="1px" cellspacing="1px"
+    <tr>
+        <td colspan="5" id="thanhtinh" style="width: 100px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="so9(1)"></td>
+        <td><input type="button" value="2" onclick="so9(2)"></td>
+        <td><input type="button" value="3" onclick="so9(3)"></td>
+        <td><input type="button" value="+" onclick="so9('+')"></td>
+    </tr>
+    <tr>
+
+        <td><input type="button" value="4" onclick="so9(4)"></td>
+        <td><input type="button" value="5" onclick="so9(5)"></td>
+        <td><input type="button" value="4" onclick="so9(6)"></td>
+        <td><input type="button" value="-" onclick="so9('-')"></td>
+    </tr>
+    <tr>
+
+        <td><input type="button" value="7" onclick="so9(7)"></td>
+        <td><input type="button" value="8" onclick="so9(8)"></td>
+        <td><input type="button" value="9" onclick="so9(9)"></td>
+        <td><input type="button" value="*" onclick="so9('*')"></td>
+    </tr>
+    <tr>
+
+        <td><input type="button" value="C" onclick="so9('CA')"></td>
+        <td><input type="button" value="0" onclick="so9(0)"></td>
+        <td><input type="button" value="=" onclick="so9('=')"></td>
+        <td><input type="button" value="/" onclick="so9('/')"></td>
+    </tr>
+
+    </table>
+</form>
+</body>
+<script>
+    let num = '';
+
+    function so9(so) {
+        if (so === '=') {
+            document.getElementById('thanhtinh').innerText = eval(num);
+        }else if (so === 'CA') {
+            num = " ";
+            document.getElementById('thanhtinh').innerText = (num);
+        }else {
+            num += so;
+            document.getElementById('thanhtinh').innerText = (num);
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class HinhChuNhat {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+
+        getDai() {
+            return this.dai;
+        }
+
+        getRong() {
+            return this.rong;
+        }
+
+        getChuvi() {
+            return (this.dai + this.rong) / 2
+        }
+
+        getDientich() {
+            return this.dai * this.rong
+        }
+    }
+
+    let hcn = new HinhChuNhat(50, 10);
+    let dai = hcn.getDai();
+    let rong = hcn.getRong();
+    let chuvi = hcn.getChuvi();
+    let dientich = hcn.getDientich()
+    document.write("Chu vi hình chữ nhật là : " + chuvi + "" + "<br>")
+    document.write("Diện tích hình chữ nhật là : " + dientich)
+
+</script>
+</body>
+</html>

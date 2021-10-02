@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let row = parseInt(prompt("Nhập số dòng"));
+    let col = parseInt(prompt("Nhập số cột"));
+    let value;
+    let sum = 0;
+    let array2d = new Array(row);
+    for (let row = 0; row < array2d.length; row++) {
+        array2d[row] = new Array(col);
+        for (let col = 0; col < array2d[row].length; col++) {
+            value = parseInt(prompt("Nhập số lượng [" + row + "] [" + col + "]"));
+            array2d[row][col] = value;
+            if (array2d[row][col] % 2 === 0) {
+                document.write(array2d[row][col] + " <br> ");
+                sum += array2d[row][col];
+            }
+        }
+    }
+    document.write("Tổng các số chẵn là : " + sum)
+
+</script>
+</body>
+</html>

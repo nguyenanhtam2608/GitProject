@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = parseInt(prompt("Nhập lương nhân viên : "));
+    if ( nhap>15){
+        document.write(" Lương chưa tính thuế : " +nhap+ " Triệu" +"<br>")
+        document.write("Thuế thu nhập của bạn : 20%" +"<br>")
+        let luong1 = nhap -nhap*0.2
+        document.write("Lương ròng của bạn : "+ luong1 +"Triệu")
+    }else if(nhap >=7&& nhap<15){
+        document.write(" Lương chưa tính thuế : " +nhap+ " Triệu "+"<br>")
+        document.write("Thuế thu nhập của bạn : 10%" +"<br>")
+        let luong2 = nhap -nhap*0.1
+        document.write("Lương ròng của bạn : "+ luong2 +" Triệu")
+    }else if(nhap>0 && nhap<7){
+        document.write("Lương chưa tính thuế : " +nhap+ " Triệu "+"<br>")
+        document.write("Thuế thu nhập của bạn : 5%" +"<br>")
+        let luong3 = nhap -nhap*0.05;
+        document.write("Lương ròng của bạn : "+ luong3 +" Triệu")
+    }else {
+        alert("Bạn hãy nhập lại số lương chính xác của mình");
+    }
+
+</script>
+</body>
+</html>

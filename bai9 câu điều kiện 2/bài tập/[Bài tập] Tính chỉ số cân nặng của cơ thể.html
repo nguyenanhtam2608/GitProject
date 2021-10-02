@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<script>
+    var cao =parseFloat(prompt("nhập chiều cao của bạn"));
+    var nang=parseFloat(prompt("nhập cân nạng của bạn"));
+    var bmi = nang/(cao * cao);
+     if(bmi >= 30){
+         alert('Obese')
+     }else if( bmi>=25){
+         alert('Overweight')
+     }else  if (bmi>=18.5){
+         alert('Nomal')
+     }else  {
+         alert('Underweight')
+     }
+
+</script>
+</body>
+</html>

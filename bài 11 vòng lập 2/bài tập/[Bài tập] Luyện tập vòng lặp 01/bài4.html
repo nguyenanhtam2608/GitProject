@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count;
+    let a = 0;
+    let b = 1;
+    let numbers=20;
+    let tempt = 0;
+    for(count=0;count<numbers;count++){
+        tempt = b;
+        b = a + b;
+        a=tempt;
+        if(tempt%5===0) {
+            document.write(tempt);
+            break;
+        }
+    }
+    // code em tham khảo ạ
+</script>
+</body>
+</html>

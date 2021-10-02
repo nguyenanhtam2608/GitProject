@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count;
+    let a = 0;
+    let b = 1;
+    let numbers=20;
+    let tempt = 0;
+    let total =0;
+    for(count=0;count<numbers;count++){
+        tempt = b;
+        b = a + b;
+        a=tempt;
+        total += a;
+        document.write(tempt + "<br>");
+    }
+    document.write("Tổng cộng : " + total);
+    // em có tham khảo code
+</script>
+</body>
+</html>

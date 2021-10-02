@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = [5,6,7];
+    let mang2 = [2,3,4];
+    let max = mang1[0];
+    let min =mang2[0];
+    for(let i =0 ; i<mang1.length;i++) {
+        if( mang1[i]>max){
+            max = mang1[i]
+        }
+    }
+    document.write("Số lớn nhất trong mảng 1 : " +max +" <br>");
+for (let j =0 ; j<mang2.length;j++){
+    if(mang2[j]<min){
+        min =mang2[j]
+    }
+}
+    document.write("Số nhỏ nhất trong mảng 2 : " +min+"<br>")
+    let phanso = max/ min;
+    document.write("Phân số lớn nhất là " + phanso)
+</script>
+</body>
+</html>

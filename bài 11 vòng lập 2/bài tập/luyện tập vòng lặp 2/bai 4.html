@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("NHập chiều cao"));
+    let width = parseInt(prompt("NHập chiều rộng"));
+    for (let i = 1; i <= height; i++) {
+
+        //Vẽ từng hàng
+        for (let j = 1; j <= width; j++) {
+            // Nếu là hàng đầu tiên hoặc cuối cùng thì vĩ dấu * nguyên hàng
+            if (i === 1 || i === height) {
+                document.write("*");
+            // Còn không phải hàng đầu tiên và cuối cùng thì xét tiếp
+            } else {
+            //Nếu là dòng đầu hoặc dòng cuối thì vẽ 1 * còn khổng thì vẽ khoảng trắng
+                if (j === 1 || j === width) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+        }
+
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

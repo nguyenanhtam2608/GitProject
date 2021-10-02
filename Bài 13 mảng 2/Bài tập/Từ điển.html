@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Từ Điển</h1>
+    <input type="text" placeholder="Nhập từ cần dịch" id="text">
+    <button onclick="search()">Search</button>
+    <h2 id="ketqua">Kết quả : </h2>
+</body>
+<script>
+    let mang1 =[1,2,3,4];
+    let mang2 = ["one","two","three","four"];
+
+    function search() {
+let text =document.getElementById('text').value;
+let index = -1;
+for (let i =0;i<mang2.length;i++){
+    if (mang2[i]===text)
+    {index = i;
+    }
+}
+if (index === -1){
+    document.getElementById("ketqua").innerHTML="Không tìm thấy "
+}else{
+    document.getElementById("ketqua").innerHTML= mang1[index]
+    }
+
+    }
+</script>
+</html>

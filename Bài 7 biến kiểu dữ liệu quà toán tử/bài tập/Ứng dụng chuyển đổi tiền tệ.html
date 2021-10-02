@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<p lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .vn {
+            margin-left: 280px;
+            margin-top: -74px;
+
+        }
+
+        .vn1 {
+            margin-left: 580px;
+            margin-top: -72px;
+        }
+
+        .vn2 {
+            margin-left: 780px;
+            margin-top: -22px;
+        }
+    </style>
+</head>
+<div>
+    <p><strong>Amount</strong></p>
+    <input type="text" id="amount">
+
+    <div class="vn"/>
+    <p><strong>From Currency</p>
+    <select id="from">
+        <option value="VND"> Việt Nam</option>
+        <option value="USD"> USD</option>
+    </select>
+</div>
+
+<div class="vn1"/>
+<p>To Currency</p>
+<select id="to">
+    <option value="USD"> USD</option>
+    <option value="VND"> Việt Nam</option>
+</select>
+</div>
+<div class="vn2"/>
+<button onclick="convert()" style="background-color:blueviolet">Convert</button>
+</div><br>
+<p><font color="blue"> Result :<span id="ketqua:"</font></p>
+
+
+
+</body>
+<script>
+    function convert() {
+        var amount = document.getElementById('amount').value;
+        var from = document.getElementById('from').value;
+        var to = document.getElementById('to').value;
+        var xong;
+        if (from === "VND" && to === "USD") {
+            xong = amount / 23000;
+        } else if (from === "USD" && to === "VND") {
+            xong = amount * 23000;
+        }else if (from ==="USD" && to==="USD"){
+            xong =amount
+        }else if (from ==="VND"&& to==="VND"){
+            xong =amount
+        }
+        document.getElementById('ketqua:').innerText = xong;
+
+
+
+
+
+    }
+
+</script>
+</html>
